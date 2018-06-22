@@ -32,12 +32,18 @@ def bulk_tweet_shortener(array_of_tweets)
 end
 
 def selective_tweet_shortener(tweet)
-  word_substituter(tweet) if tweet.length > 140
+  if tweet.length > 140
+    word_substituter(tweet)
+  else
+    tweet
+  end
 end
 
 # tweet = "Hey guys, can anyone teach me how to be cool? For I really want to be the best at everything, you know what I mean? Tweeting is super fun you guys!!!!"
 
-# selective_tweet_shortener(tweet)
+# tweet2 = "Hey guys, can anyone teach me how to be cool?"
+
+# selective_tweet_shortener(tweet2)
 
 def shortened_tweet_truncator
 end
