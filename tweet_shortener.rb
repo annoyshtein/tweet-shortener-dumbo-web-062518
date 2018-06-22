@@ -15,7 +15,7 @@ def word_substituter(string)
   string_array = string.split(" ")
   string_array.collect do |word|
     dictionary.each do |key, value|
-      if key.to_s == word
+      if key.to_s == word.downcase
         word.replace value
       end
     end
@@ -23,7 +23,7 @@ def word_substituter(string)
   string_array.join(" ")
 end
 
-# tweet = "Hey guys, can anyone teach me how to be cool? I really want to be the best at everything, you know what I mean? Tweeting is super fun you guys!!!!"
+# tweet = "Hey guys, can anyone teach me how to be cool? For I really want to be the best at everything, you know what I mean? Tweeting is super fun you guys!!!!"
 
 # word_substituter(tweet)
 
