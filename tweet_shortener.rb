@@ -23,8 +23,6 @@ def word_substituter(string)
   string_array.join(" ")
 end
 
-# tweet = "Hey guys, can anyone teach me how to be cool? For I really want to be the best at everything, you know what I mean? Tweeting is super fun you guys!!!!"
-
 # word_substituter(tweet)
 
 def bulk_tweet_shortener(array_of_tweets)
@@ -34,8 +32,12 @@ def bulk_tweet_shortener(array_of_tweets)
 end
 
 def selective_tweet_shortener(tweet)
-  word_substituter(tweet) if tweet > 140
+  word_substituter(tweet) if tweet.length > 140
 end
+
+# tweet = "Hey guys, can anyone teach me how to be cool? For I really want to be the best at everything, you know what I mean? Tweeting is super fun you guys!!!!"
+
+# selective_tweet_shortener(tweet)
 
 def shortened_tweet_truncator
 end
